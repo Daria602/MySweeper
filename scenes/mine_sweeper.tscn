@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://cmqloprmu4v3x"]
+
+[ext_resource type="Texture2D" uid="uid://b010ipyaw548j" path="res://assets/tiles.png" id="1_2ts67"]
+[ext_resource type="Script" uid="uid://bttwmhye0n8ov" path="res://scripts/tiles_generator.gd" id="2_2l3at"]
+[ext_resource type="Script" uid="uid://rr8vutmrjoy6" path="res://scripts/game_manager.gd" id="2_4ey85"]
+[ext_resource type="Script" uid="uid://bvijl5the3qft" path="res://scripts/game_mechanics_manager.gd" id="2_58ekn"]
+[ext_resource type="Script" uid="uid://detiiha15xmqt" path="res://scripts/tile_mask_generator.gd" id="3_yjsws"]
+[ext_resource type="PackedScene" uid="uid://dvdha5smekvi5" path="res://scenes/ui.tscn" id="6_rjof0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ey85"]
+texture = ExtResource("1_2ts67")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2l3at"]
+sources/0 = SubResource("TileSetAtlasSource_4ey85")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58ekn"]
+texture = ExtResource("1_2ts67")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rjof0"]
+sources/0 = SubResource("TileSetAtlasSource_58ekn")
+
+[node name="MineSweeper" type="Node"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_4ey85")
+
+[node name="GameMechanicsManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_58ekn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(77, 77)
+zoom = Vector2(2, 2)
+
+[node name="Tiles" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+tile_set = SubResource("TileSet_2l3at")
+script = ExtResource("2_2l3at")
+
+[node name="TileMask" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+tile_set = SubResource("TileSet_rjof0")
+script = ExtResource("3_yjsws")
+
+[node name="UI" parent="." instance=ExtResource("6_rjof0")]
+unique_name_in_owner = true
+
+[editable path="UI"]
