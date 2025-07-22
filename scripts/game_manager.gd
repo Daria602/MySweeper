@@ -22,10 +22,12 @@ func _ready() -> void:
 TODO:
 ++++1. If you open an empty cell, trigger the open for the others
 ++++2. Implement restart
-	2. Implement death
+++++2. Implement death
 	3. If you right click on a number cell and it has sufficient number of flags around, try to open adjacent cells
 	4. Implement "set board length, width, height", check for the correct amount of bombs to be generated (validator function)
 	5. Check how the fucking camera is offset (it's now like 70 something on both axis)
 	6. When clicking on a number, highlight the cells adjacent to it
 	7. Add "wrongly flagged" tile, maybe with just some redness around it
+	8. Add the button image for winning the game
+	9. Display the correct number of bombs remaining and timer
 """

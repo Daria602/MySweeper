@@ -43,6 +43,9 @@ const POSITIONS_AROUND_POINT: Array[Vector2i] = [
 	Vector2i(1, 1)
 ]
 
+# Images
+const BUTTON_DEAD_IMAGE = preload("res://assets/minesweeper_dead.png")
+
 func validate_input(count: int, max_val: int, min_val: int) -> bool:
 	if min_val > max_val:
 		return false
