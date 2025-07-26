@@ -1,13 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmqloprmu4v3x"]
+[gd_scene load_steps=12 format=3 uid="uid://cmqloprmu4v3x"]
 
-[ext_resource type="Texture2D" uid="uid://b010ipyaw548j" path="res://assets/tiles.png" id="1_2ts67"]
+[ext_resource type="Texture2D" uid="uid://boll6oodtljqr" path="res://assets/tiles.png" id="1_2ts67"]
 [ext_resource type="Script" uid="uid://bttwmhye0n8ov" path="res://scripts/tiles_generator.gd" id="2_2l3at"]
 [ext_resource type="Script" uid="uid://rr8vutmrjoy6" path="res://scripts/game_manager.gd" id="2_4ey85"]
 [ext_resource type="Script" uid="uid://bvijl5the3qft" path="res://scripts/game_mechanics_manager.gd" id="2_58ekn"]
 [ext_resource type="Script" uid="uid://detiiha15xmqt" path="res://scripts/tile_mask_generator.gd" id="3_yjsws"]
 [ext_resource type="PackedScene" uid="uid://dvdha5smekvi5" path="res://scenes/ui.tscn" id="6_rjof0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ey85"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjof0"]
 texture = ExtResource("1_2ts67")
 0:0/0 = 0
 1:0/0 = 0
@@ -27,10 +27,13 @@ texture = ExtResource("1_2ts67")
 3:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_2l3at"]
-sources/0 = SubResource("TileSetAtlasSource_4ey85")
+sources/0 = SubResource("TileSetAtlasSource_rjof0")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t63rq"]
+load_path = "res://.godot/imported/tiles.png-0d11a4bcdfb48056f67a66da241684a1.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58ekn"]
-texture = ExtResource("1_2ts67")
+texture = SubResource("CompressedTexture2D_t63rq")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boll6oodtljqr"
-path="res://.godot/imported/tiles.png-0d11a4bcdfb48056f67a66da241684a1.ctex"
+uid="uid://vbv1bo0kmtk4"
+path="res://.godot/imported/minesweeper_cool.png-a653b0a33499e5fe9afeeef301448a67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles.png"
-dest_files=["res://.godot/imported/tiles.png-0d11a4bcdfb48056f67a66da241684a1.ctex"]
+source_file="res://assets/minesweeper_cool.png"
+dest_files=["res://.godot/imported/minesweeper_cool.png-a653b0a33499e5fe9afeeef301448a67.ctex"]
 
 [params]
 

@@ -23,7 +23,8 @@ const CELLS_COORDINATES = {
 	"BOMB": Vector2i(1,2),
 	"BOMB_EXPLODED": Vector2i(2,2),
 	"UNEXPLORED": Vector2i(3,2),
-	"EXPLORED": Vector2i(0,3)
+	"FLAG_WRONG": Vector2i(0,3),
+	"EXPLORED": Vector2i(1,3)
 }
 
 const FLAG = "FLAG"
@@ -31,6 +32,7 @@ const BOMB = "BOMB"
 const BOMB_EXPLODED = "BOMB_EXPLODED"
 const UNEXPLORED = "UNEXPLORED"
 const EXPLORED = "EXPLORED"
+const FLAG_WRONG = "FLAG_WRONG"
 
 const POSITIONS_AROUND_POINT: Array[Vector2i] = [
 	Vector2i(-1, -1),

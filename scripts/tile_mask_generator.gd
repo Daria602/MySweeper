@@ -33,7 +33,6 @@ func _input(event: InputEvent) -> void:
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
 			var wasFlagged = game_mechanics_manager.toggle_flag_mask_cell(clicked_cell_coord)
 			toggle_flag(clicked_cell_coord, wasFlagged)
-			
 
 func toggle_flag(tile_coordinates: Vector2i, valueSetByManager: String):
 	if valueSetByManager == Constants.CELL_FLAGGED:
@@ -49,3 +48,9 @@ func toggle_flag(tile_coordinates: Vector2i, valueSetByManager: String):
 
 func clear_mask_cell(tile_coordinates: Vector2i):
 	erase_cell(tile_coordinates)
+
+func set_flagged_wrong(cell_coordinates: Vector2i):
+	set_cell(
+					cell_coordinates,
+					Constants.TILE_SET_ID,
+					Constants.CELLS_COORDINATES[Constants.FLAG_WRONG])

@@ -83,15 +83,12 @@ func is_a_bomb(cell_coordinates: Vector2i) -> bool:
 	return game_board[cell_coordinates.x][cell_coordinates.y] == Constants.BOMB_TILE
 
 func set_death_state_of_bombs(clicked_bomb_cell: Vector2i):
-	# TODO: set the button to show dead
 	var restart_button = get_node("../UI/PanelContainer/HBoxContainer/RestartButton")
 	restart_button.changed_button_to_dead()
 	tiles.set_exploding_bomb(clicked_bomb_cell)
 	for row in game_board.size():
 		for column in game_board[row].size():
 			if game_board[row][column] != Constants.BOMB_TILE and mask[row][column] == Constants.CELL_FLAGGED:
-				# TODO: change it to the wrongly flagged here
-				continue
+				tile_mask.set_flagged_wrong(Vector2i(row, column))
 			elif game_board[row][column] == Constants.BOMB_TILE and mask[row][column] != Constants.CELL_FLAGGED:
 				tile_mask.clear_mask_cell(Vector2i(row, column))
-			
